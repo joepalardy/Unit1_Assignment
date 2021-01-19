@@ -1,0 +1,201 @@
+---
+title: "Unit 1 Application"
+output:
+  md_document:
+    variant: gfm
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ISLR)
+set.seed(1)
+```
+
+## For the next few questions, we'll be using datasets from your book that are included in the ISLR package. Make sure you have it installed.
+
+
+## Question 1
+
+Use ?? to find out information about the R functions, mean, var, median, and sd.
+
+a. What are the arguments for the functions?
+b. What data types work with these funcitons?
+c. How are NA's handled?
+
+
+### Answer (text only for this response)
+
+
+
+*************************************
+
+## Question 2
+
+Create a random numeric vector of size 100 using the function rnorm(100,1,2).
+a. Calculate the mean and standard deviation of your vector.
+b. Do your answers to a. match the arguments of rnorm()? Are they close?
+
+
+### Answer
+
+```{r Q2}
+
+```
+
+
+
+
+*************************************
+
+
+
+## Question 3
+
+Using the dataset Auto, do the following:
+
+a. Use glimpse to determine the types of the variables in Auto. Make note of which variables are factors.
+b. Select only the variables mpg, horsepower, and displacement.
+c. Create a scatter plot matrix using
+   i. Base R with pairs
+   ii. library GGally and ggpairs
+d. Do you notice any patterns?
+
+
+### Answer
+
+```{r Q3}
+
+```
+
+
+
+
+*************************************
+
+
+## Question 4
+
+Using the full dataset Auto, do the following:
+
+a. Use group_by and summarize to find the mean and standard deviation of mpg by cylinders.
+b. What pattern do you see? Are there any groups that break that pattern?
+
+
+### Answer
+
+```{r Q4}
+
+```
+
+
+
+
+*************************************
+
+
+## Question 5
+
+Using the full dataset Auto, do the following:
+
+a. Use filter to find all the autos cylinders greater than 3.
+b. Create a scatterplot of mpg and displacement using the filtered data.
+c. Change the color of the points to represent # of cylinders. (Hint: take a look a the data type of cylinders)
+
+
+### Answer
+
+```{r Q5}
+
+```
+
+
+
+
+*************************************
+
+
+
+## Question 6
+
+Using the full dataset Auto, do the following:
+
+  a) Use lm() to perform a simple linear regression with mpg as the output and displacement as the input.
+     i. Is there a relationship between the displacement and mpg?
+     ii. Is the relationship statistically significant?
+     iii. Interpret the parameter estimate associated with displacement.
+  b) Use augment from the broom package to add the residuals and other diagnostics.
+  c) Create a scatter plot of the residuals with respect to displacement.
+     i. Do you suspect any high leverage points or outliers?
+     ii. Use filter to see if there are any observations with a std.resid greater than 3.
+
+
+
+### Answer
+
+```{r Q6}
+
+```
+
+
+
+
+*************************************
+
+
+## Question 7
+
+
+Using the full dataset Auto, do the following:
+
+a. Create four models for mpg as a function of displacement (X) with
+   + X
+   + $X^2$
+   + log(X)
+   + $\sqrt{X}$
+b. Using the modelr package and gather_residuals() find the mse and mae for each of the above models.
+
+### Answer
+
+```{r Q7}
+
+```
+
+
+
+
+*************************************
+
+
+## Question 8
+
+Using the full dataset Auto, do the following:
+
+a. Use lm() to perform a multiple linear regression with mpg as the output and displacement, horsepower, and weight as the inputs.
+   i. Are there relationship between displacement, horsepower, and weight and mpg?
+   ii. Are the relationships statistically significant?
+   iii. Interpret the parameter estimates.
+b. Use augment from the broom package to add the residuals and other diagnostics.
+c. Create a scatter plot of the residuals with respect to displacement.
+   i. Do you suspect any high leverage points or outliers?
+   ii. Use filter to see if there are any observations with a std.resid greater than 3.
+   iii. Using the function vif from the car package (make sure you install it) calculate the variance inflation factors for displacement, horsepower, and weight.
+   iv. Is multicolinearity a potential issue? What effects would this have on parameter estimates?
+
+
+
+
+### Answer
+
+```{r Q8}
+
+```
+
+
+
+
+*************************************
+
+
